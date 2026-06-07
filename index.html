@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="fa-solid fa-hotel"></i>
+                <h2>HMS Portal</h2>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <a href="#profile" class="menu-item active"><i class="fa-solid fa-user-graduate"></i> Student Profile</a>
+                <a href="#admin-access" class="menu-item"><i class="fa-solid fa-user-shield"></i> Admin Access <span class="badge">5 New</span></a>
+                <a href="#room-allotment" class="menu-item"><i class="fa-solid fa-bed"></i> Room Allotment</a>
+                <a href="#payment" class="menu-item"><i class="fa-solid fa-credit-card"></i> Payments</a>
+                <a href="#food-order" class="menu-item"><i class="fa-solid fa-utensils"></i> Food Order</a>
+                <a href="#notices" class="menu-item"><i class="fa-solid fa-bullhorn"></i> University Notices</a>
+                <a href="#complaints" class="menu-item"><i class="fa-solid fa-circle-exclamation"></i> Complaints</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="login.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div class="welcome-msg">
+                    <h1>Welcome Back, <span class="student-name" id="display-top-name">Samia Rahman</span>!</h1>
+                    <p>University Hostel Resident Dashboard</p>
+                </div>
+                <div class="user-profile-nav">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" alt="Profile Picture" class="avatar">
+                    <div class="user-info">
+                        <h4 id="display-sidebar-name">Samia Rahman</h4>
+                        <small>ID: <span id="display-id">2026-0412</span></small>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-body">
+                
+                <section class="card">
+                    <h3><i class="fa-solid fa-user-pen"></i> Edit Resident Profile</h3>
+                    <form id="profile-form" class="auth-form" onsubmit="saveProfile(event)">
+                        <div class="grid-2-col-form">
+                            <div class="input-group">
+                                <label for="edit-name">Full Name</label>
+                                <input type="text" id="edit-name" value="Samia Rahman" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="edit-phone">Phone Number</label>
+                                <input type="tel" id="edit-phone" value="+8801712345678" required>
+                            </div>
+                        </div>
+                        <div class="grid-2-col-form">
+                            <div class="input-group">
+                                <label for="edit-dept">Department</label>
+                                <input type="text" id="edit-dept" value="CSE" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="edit-blood">Blood Group</label>
+                                <input type="text" id="edit-blood" value="O+" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="margin-top: 1rem;"><i class="fa-solid fa-floppy-disk"></i> Save Changes</button>
+                    </form>
+                </section>
+
+                <section class="card section-admin">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-user-shield"></i> Admin Access & Applications</h3>
+                    </div>
+                    <div class="admin-stats">
+                        <div class="stat-box">
+                            <span class="stat-number">42</span>
+                            <span class="stat-label">Total Applied Students</span>
+                        </div>
+                        <div class="stat-box approved">
+                            <span class="stat-number">35</span>
+                            <span class="stat-label">Approved Applications</span>
+                        </div>
+                        <div class="stat-box pending">
+                            <span class="stat-number">7</span>
+                            <span class="stat-label">Pending Review</span>
+                        </div>
+                    </div>
+                    
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>Student Name</th>
+                                <th>Department</th>
+                                <th>Room Type</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tasmia Islam</td>
+                                <td>CSE</td>
+                                <td>Premium Dual</td>
+                                <td><span class="badge badge-success">Approved</span></td>
+                            </tr>
+                            <tr>
+                                <td>Oishi Das</td>
+                                <td>EEE</td>
+                                <td>Standard Quad</td>
+                                <td><span class="badge badge-pending">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <div class="grid-2-col">
+                    <div class="card">
+                        <h3><i class="fa-solid fa-bed"></i> Room & Payment Status</h3>
+                        <div class="info-list">
+                            <div class="info-item"><strong>Current Room:</strong> <span>Block B - 402</span></div>
+                            <div class="info-item"><strong>Due Amount:</strong> <span class="text-danger">$0.00 (Paid)</span></div>
+                        </div>
+                        <button class="btn btn-primary">Pay Monthly Fees</button>
+                    </div>
+
+                    <div class="card">
+                        <h3><i class="fa-solid fa-utensils"></i> Today's Meal Menu</h3>
+                        <div class="info-list">
+                            <div class="info-item"><strong>Breakfast:</strong> <span>Khichuri with Egg</span></div>
+                            <div class="info-item"><strong>Lunch:</strong> <span>Rice, Fish Curry, Daal</span></div>
+                        </div>
+                        <button class="btn btn-secondary">Order Next Meal</button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // LocalStorage checking: jodi signup processing thake tobe data auto fillup hobe
+            if(localStorage.getItem("studentName")) {
+                updateUIElements(localStorage.getItem("studentName"), localStorage.getItem("studentID"));
+                
+                document.getElementById("edit-name").value = localStorage.getItem("studentName");
+                document.getElementById("edit-dept").value = localStorage.getItem("studentDept") || "CSE";
+                document.getElementById("edit-phone").value = localStorage.getItem("studentPhone") || "+8801712345678";
+            }
+        });
+
+        function saveProfile(event) {
+            event.preventDefault();
+            
+            let nameValue = document.getElementById("edit-name").value;
+            let phoneValue = document.getElementById("edit-phone").value;
+            let deptValue = document.getElementById("edit-dept").value;
+
+            // Permanent Browser Saving
+            localStorage.setItem("studentName", nameValue);
+            localStorage.setItem("studentPhone", phoneValue);
+            localStorage.setItem("studentDept", deptValue);
+
+            // Dynamically Updating Header Name
+            updateUIElements(nameValue, localStorage.getItem("studentID") || "2026-0412");
+
+            alert("🎉 Profile updated and perfectly saved inside local data structure!");
+        }
+
+        function updateUIElements(name, id) {
+            document.getElementById("display-top-name").innerText = name;
+            document.getElementById("display-sidebar-name").innerText = name;
+            document.getElementById("display-id").innerText = id;
+        }
+    </script>
+</body>
+</html>
