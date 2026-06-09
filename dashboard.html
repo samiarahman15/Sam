@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - HostelHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="bg-gray-950 text-white">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <a href="rooms.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-bed"></i> Rooms</a>
+<a href="food.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-utensils"></i> Food Order</a>
+<a href="payment.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-money-bill"></i> Payments</a>
+<a href="complaint.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-exclamation-triangle"></i> Complaints</a>
+<a href="notice.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-bullhorn"></i> Notices</a>
+    <div class="w-72 bg-gray-900 p-6 hidden md:block">
+      <h1 class="text-3xl font-bold mb-10 text-cyan-400">HostelHub</h1>
+      <nav class="space-y-3">
+        <a href="dashboard.html" class="flex items-center gap-4 px-6 py-4 bg-gray-800 rounded-2xl"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="rooms.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-bed"></i> Rooms</a>
+        <a href="food.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-utensils"></i> Food Order</a>
+        <a href="complaint.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-exclamation-triangle"></i> Complaints</a>
+        <a href="payment.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-money-bill"></i> Payments</a>
+        <a href="notice.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-bullhorn"></i> Notices</a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-8">
+      <div class="flex justify-between items-center mb-10">
+        <h2 class="text-4xl font-bold">Welcome back, Rahim 👋</h2>
+        <div class="flex items-center gap-4">
+          <button onclick="window.location.href='login.html'" class="bg-red-500 px-6 py-2 rounded-xl">Logout</button>
+        </div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+        <div class="bg-gray-900 p-6 rounded-3xl"><h3 class="text-cyan-400">Room No</h3><p class="text-4xl font-bold">A-205</p></div>
+        <div class="bg-gray-900 p-6 rounded-3xl"><h3 class="text-cyan-400">Due Payment</h3><p class="text-4xl font-bold text-orange-400">৳ 2450</p></div>
+        <div class="bg-gray-900 p-6 rounded-3xl"><h3 class="text-cyan-400">Food Orders</h3><p class="text-4xl font-bold">8</p></div>
+        <div class="bg-gray-900 p-6 rounded-3xl"><h3 class="text-cyan-400">Complaints</h3><p class="text-4xl font-bold text-yellow-400">2</p></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-gray-900 p-8 rounded-3xl">
+          <h3 class="text-xl mb-6 font-semibold">Recent Notices</h3>
+          <ul class="space-y-4">
+            <li class="flex gap-4"><span class="text-cyan-400">📢</span> Mid-term exam schedule updated</li>
+            <li class="flex gap-4"><span class="text-cyan-400">📢</span> Mess menu for next week</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-900 p-8 rounded-3xl">
+          <h3 class="text-xl mb-6 font-semibold">Quick Actions</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <button onclick="window.location.href='food.html'" class="bg-cyan-600 hover:bg-cyan-700 py-6 rounded-2xl text-lg">Order Food</button>
+            <button onclick="window.location.href='complaint.html'" class="bg-amber-600 hover:bg-amber-700 py-6 rounded-2xl text-lg">File Complaint</button>
+            <button onclick="window.location.href='payment.html'" class="bg-emerald-600 hover:bg-emerald-700 py-6 rounded-2xl text-lg">Pay Now</button>
+            <button onclick="window.location.href='notice.html'" class="bg-purple-600 hover:bg-purple-700 py-6 rounded-2xl text-lg">View Notices</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
