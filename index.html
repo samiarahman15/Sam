@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hostel Management System</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+header{
+    background:linear-gradient(135deg,#0f172a,#0891b2);
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:2rem;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+.sidebar{
+    width:250px;
+    background:#0f172a;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:15px 0;
+}
+
+.sidebar ul li a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    padding:10px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.sidebar ul li a:hover{
+    background:#0891b2;
+}
+
+.main{
+    flex:1;
+    padding:30px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.card i{
+    font-size:40px;
+    color:#0891b2;
+    margin-bottom:10px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.table-section{
+    margin-top:40px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+table th{
+    background:#0891b2;
+    color:white;
+    padding:15px;
+}
+
+table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+.status{
+    padding:5px 12px;
+    border-radius:20px;
+    color:white;
+}
+
+.pending{
+    background:orange;
+}
+
+.approved{
+    background:green;
+}
+
+.notice{
+    background:white;
+    margin-top:40px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.notice h2{
+    margin-bottom:15px;
+}
+
+.notice-item{
+    padding:12px;
+    border-left:5px solid #0891b2;
+    margin-bottom:10px;
+    background:#f8fafc;
+}
+
+@media(max-width:768px){
+
+.container{
+    flex-direction:column;
+}
+
+.sidebar{
+    width:100%;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Hostel Management System</h1>
+    <p>Student Accommodation Management Portal</p>
+</header>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+
+        <ul>
+            <li><a href="#"><i class="fas fa-user-graduate"></i> Students</a></li>
+            <li><a href="#"><i class="fas fa-bed"></i> Rooms</a></li>
+            <li><a href="#"><i class="fas fa-file-alt"></i> Applications</a></li>
+            <li><a href="#"><i class="fas fa-credit-card"></i> Payments</a></li>
+            <li><a href="#"><i class="fas fa-utensils"></i> Food Orders</a></li>
+            <li><a href="#"><i class="fas fa-comment-dots"></i> Complaints</a></li>
+            <li><a href="#"><i class="fas fa-bullhorn"></i> Notices</a></li>
+            <li><a href="#"><i class="fas fa-user-shield"></i> Admin</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <div class="cards">
+
+            <div class="card">
+                <i class="fas fa-user-graduate"></i>
+                <h3>Students</h3>
+                <h2>250</h2>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-bed"></i>
+                <h3>Rooms</h3>
+                <h2>80</h2>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-credit-card"></i>
+                <h3>Payments</h3>
+                <h2>190</h2>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-utensils"></i>
+                <h3>Food Orders</h3>
+                <h2>145</h2>
+            </div>
+
+        </div>
+
+        <div class="table-section">
+
+            <h2>Applications</h2>
+
+            <br>
+
+            <table>
+
+                <tr>
+                    <th>Application ID</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>APP001</td>
+                    <td>09 June 2026</td>
+                    <td><span class="status approved">Approved</span></td>
+                </tr>
+
+                <tr>
+                    <td>APP002</td>
+                    <td>10 June 2026</td>
+                    <td><span class="status pending">Pending</span></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="notice">
+
+            <h2>Latest Notices</h2>
+
+            <div class="notice-item">
+                Hostel fee payment deadline: 15 June
+            </div>
+
+            <div class="notice-item">
+                Dining hall maintenance on Friday
+            </div>
+
+            <div class="notice-item">
+                New room allocation list published
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
