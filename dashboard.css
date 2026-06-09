@@ -1,0 +1,48 @@
+body{
+background:#F1F5F9;
+font-family:'Segoe UI',sans-serif;
+}
+
+.navbar{
+background:#1E293B;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo h2{
+color:white;
+}
+
+.nav-right a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+}
+
+.nav-right a:hover{
+color:#06B6D4;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:30px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+text-align:center;
+}
+
+.card i{
+font-size:40px;
+color:#2563EB;
+margin-bottom:15px;
+}
