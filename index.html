@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hostel Management System</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#0891b2);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:400px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.title{
+    text-align:center;
+    margin-bottom:20px;
+    color:#0f172a;
+}
+
+.form{
+    display:none;
+}
+
+.form.active{
+    display:block;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#0891b2;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#06748f;
+}
+
+.switch{
+    text-align:center;
+    margin-top:15px;
+}
+
+.switch a{
+    color:#0891b2;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Login Form -->
+    <div id="loginForm" class="form active">
+        <h2 class="title">Login</h2>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+
+        <div class="switch">
+            Don't have an account?
+            <a href="#" onclick="showSignup()">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signupForm" class="form">
+        <h2 class="title">Create Account</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Phone Number">
+        <input type="password" placeholder="Password">
+        <input type="password" placeholder="Confirm Password">
+
+        <button>Sign Up</button>
+
+        <div class="switch">
+            Already have an account?
+            <a href="#" onclick="showLogin()">Login</a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function showSignup(){
+    document.getElementById("loginForm").classList.remove("active");
+    document.getElementById("signupForm").classList.add("active");
+}
+
+function showLogin(){
+    document.getElementById("signupForm").classList.remove("active");
+    document.getElementById("loginForm").classList.add("active");
+}
+</script>
+
+</body>
+</html>
