@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - HostelHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white min-h-screen flex items-center justify-center">
+  <div class="max-w-lg w-full bg-gray-900 p-10 rounded-3xl">
+    <h2 class="text-4xl font-bold text-center mb-8">Student Registration</h2>
+    
+    <div class="grid grid-cols-2 gap-6">
+      <div class="col-span-2 md:col-span-1">
+        <label>Student Name</label>
+        <input type="text" class="w-full px-5 py-3 bg-gray-800 rounded-2xl mt-2">
+      </div>
+      <div class="col-span-2 md:col-span-1">
+        <label>Student ID</label>
+        <input type="text" class="w-full px-5 py-3 bg-gray-800 rounded-2xl mt-2">
+      </div>
+      <div class="col-span-2">
+        <label>Email</label>
+        <input type="email" class="w-full px-5 py-3 bg-gray-800 rounded-2xl mt-2">
+      </div>
+      <div class="col-span-2 md:col-span-1">
+        <label>Phone</label>
+        <input type="tel" class="w-full px-5 py-3 bg-gray-800 rounded-2xl mt-2">
+      </div>
+      <div class="col-span-2 md:col-span-1">
+        <label>Department</label>
+        <input type="text" class="w-full px-5 py-3 bg-gray-800 rounded-2xl mt-2">
+      </div>
+    </div>
+
+    <button onclick="window.location.href='dashboard.html'" 
+            class="w-full mt-8 bg-cyan-500 hover:bg-cyan-600 py-4 rounded-2xl font-semibold">
+      Create Account
+    </button>
+  </div>
+</body>
+</html>
