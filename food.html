@@ -1,54 +1,57 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Order - HostelHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="bg-gray-950 text-white">
+  <div class="flex min-h-screen">
+    <!-- Sidebar same as above -->
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-  <!-- Biriyani -->
-  <div class="bg-gray-900 p-6 rounded-3xl text-center">
-    <i class="fas fa-bowl-food text-5xl mb-4 text-orange-400"></i>
-    <h3 class="text-xl">Biriyani</h3>
-    <p class="text-2xl font-bold mt-2">৳ 120</p>
-    <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 px-8 py-3 rounded-2xl">
-      Add to Cart
-    </button>
+    <div class="flex-1 p-8">
+      <h2 class="text-4xl font-bold mb-8">Food Menu</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-900 p-6 rounded-3xl text-center">
+          <i class="fas fa-bowl-food text-5xl mb-4 text-orange-400"></i>
+          <h3 class="text-xl">Biriyani</h3>
+          <p class="text-2xl font-bold mt-2">৳ 120</p>
+          <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 px-8 py-3 rounded-2xl">Add to Cart</button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-900 p-6 rounded-3xl text-center">
+          <i class="fas fa-bowl-food text-5xl mb-4 text-orange-400"></i>
+          <h3 class="text-xl">Rice,Dal and Curry</h3>
+          <p class="text-2xl font-bold mt-2">৳ 160</p>
+          <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 px-8 py-3 rounded-2xl">Add to Cart</button>
+        </div>
+        <<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-900 p-6 rounded-3xl text-center">
+          <i class="fas fa-bowl-food text-5xl mb-4 text-orange-400"></i>
+          <h3 class="text-xl">Khichuri</h3>
+          <p class="text-2xl font-bold mt-2">৳ 70</p>
+          <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 px-8 py-3 rounded-2xl">Add to Cart</button>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-900 p-6 rounded-3xl text-center">
+          <i class="fas fa-bowl-food text-5xl mb-4 text-orange-400"></i>
+          <h3 class="text-xl">Pizza</h3>
+          <p class="text-2xl font-bold mt-2">৳ 200</p>
+          <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 px-8 py-3 rounded-2xl">Add to Cart</button>
+        </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-900 p-6 rounded-3xl text-center">
+          <i class="fas fa-bowl-food text-5xl mb-4 text-orange-400"></i>
+          <h3 class="text-xl">Burger</h3>
+          <p class="text-2xl font-bold mt-2">৳ 60</p>
+          <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 px-8 py-3 rounded-2xl">Add to Cart</button>
+        </div>
+    
+        </div>!-- Add more item-->
+      </div>
+    </div>
   </div>
-
-  <!-- Rice, Dal & Curry -->
-  <div class="bg-gray-900 p-6 rounded-3xl text-center">
-    <i class="fas fa-utensils text-5xl mb-4 text-yellow-400"></i>
-    <h3 class="text-xl">Rice, Dal & Curry</h3>
-    <p class="text-2xl font-bold mt-2">৳ 80</p>
-    <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 px-8 py-3 rounded-2xl">
-      Add to Cart
-    </button>
-  </div>
-
-  <!-- Khichuri with Mutton -->
-  <div class="bg-gray-900 p-6 rounded-3xl text-center">
-    <i class="fas fa-drumstick-bite text-5xl mb-4 text-orange-300"></i>
-    <h3 class="text-xl">Khichuri with Mutton</h3>
-    <p class="text-2xl font-bold mt-2">৳ 150</p>
-    <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 px-8 py-3 rounded-2xl">
-      Add to Cart
-    </button>
-  </div>
-
-  <!-- Pizza -->
-  <div class="bg-gray-900 p-6 rounded-3xl text-center">
-    <i class="fas fa-pizza-slice text-red-400 text-5xl mb-4"></i>
-    <h3 class="text-xl">Pizza</h3>
-    <p class="text-2xl font-bold mt-2">৳ 200</p>
-    <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 px-8 py-3 rounded-2xl">
-      Add to Cart
-    </button>
-  </div>
-
-  <!-- Burger -->
-  <div class="bg-gray-900 p-6 rounded-3xl text-center">
-    <i class="fas fa-hamburger text-green-400 text-5xl mb-4"></i>
-    <h3 class="text-xl">Burger</h3>
-    <p class="text-2xl font-bold mt-2">৳ 90</p>
-    <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 px-8 py-3 rounded-2xl">
-      Add to Cart
-    </button>
-  </div>
-
-</div>
+</body>
+</html>
