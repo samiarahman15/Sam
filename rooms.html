@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +7,115 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body class="bg-gray-950 text-white">
+<body class="bg-[#F8F1E9] text-[#1F2937]">
   <div class="flex min-h-screen">
-    <!-- Sidebar (same as dashboard) -->
-    <div class="w-72 bg-gray-900 p-6 hidden md:block">
-      <h1 class="text-3xl font-bold mb-10 text-cyan-400">HostelHub</h1>
-      <!-- Copy sidebar nav from dashboard.html -->
+    
+    <!-- Sidebar -->
+    <div class="w-72 bg-[#0F3D2B] text-white p-6 hidden md:block">
+      <div class="flex items-center gap-3 mb-12">
+        <div class="w-11 h-11 bg-[#E65C3A] rounded-2xl flex items-center justify-center text-3xl">🏠</div>
+        <span class="text-3xl font-bold">HMS Portal</span>
+      </div>
+      
+      <nav class="space-y-2">
+        <a href="dashboard.html" class="nav-link flex items-center gap-4 px-6 py-4 rounded-2xl hover:bg-white/10">
+          <i class="fas fa-home w-5"></i> Dashboard
+        </a>
+        <a href="rooms.html" class="nav-link active flex items-center gap-4 px-6 py-4 rounded-2xl bg-[#E65C3A] text-white">
+          <i class="fas fa-bed w-5"></i> Rooms
+        </a>
+        <a href="food.html" class="nav-link flex items-center gap-4 px-6 py-4 rounded-2xl hover:bg-white/10">
+          <i class="fas fa-utensils w-5"></i> Food Order
+        </a>
+        <a href="complaint.html" class="nav-link flex items-center gap-4 px-6 py-4 rounded-2xl hover:bg-white/10">
+          <i class="fas fa-exclamation-triangle w-5"></i> Complaints
+        </a>
+        <a href="payment.html" class="nav-link flex items-center gap-4 px-6 py-4 rounded-2xl hover:bg-white/10">
+          <i class="fas fa-money-bill w-5"></i> Payments
+        </a>
+        <a href="notice.html" class="nav-link flex items-center gap-4 px-6 py-4 rounded-2xl hover:bg-white/10">
+          <i class="fas fa-bullhorn w-5"></i> Notices
+        </a>
+        <a href="application.html" class="nav-link flex items-center gap-4 px-6 py-4 rounded-2xl hover:bg-white/10">
+          <i class="fas fa-file-alt w-5"></i> Applications
+        </a>
+      </nav>
     </div>
 
+    <!-- Main Content -->
     <div class="flex-1 p-8">
-      <h2 class="text-4xl font-bold mb-8">Available Rooms</h2>
+      <h2 class="text-4xl font-bold mb-8 text-[#0F3D2B]">Available Rooms</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-gray-900 p-6 rounded-3xl">
-          <h3 class="text-2xl font-semibold">A-205</h3>
-          <p class="text-cyan-400">Single Room • Available</p>
-          <p class="mt-4">৳ 4500 / month</p>
-          <button class="mt-6 w-full bg-cyan-500 hover:bg-cyan-600 py-3 rounded-2xl">Book Now</button>
+        
+        <!-- Single Room -->
+        <div class="bg-white p-6 rounded-3xl shadow hover:shadow-xl transition-all border border-[#EDE4D5]">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-2xl font-semibold text-[#0F3D2B]">A-205</h3>
+              <p class="text-[#4A7043] font-medium">Single Room • Available</p>
+            </div>
+            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Available</span>
+          </div>
+          <p class="mt-4 text-3xl font-bold text-[#E65C3A]">৳ 4500 <span class="text-sm font-normal text-gray-500">/ month</span></p>
+          <ul class="mt-4 text-sm space-y-1 text-gray-600">
+            <li>✓ Bed + Study Table</li>
+            <li>✓ Attached Bathroom</li>
+            <li>✓ WiFi Included</li>
+          </ul>
+          <button class="mt-6 w-full bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-3 rounded-2xl font-semibold">Book Now</button>
         </div>
-        <!--  you can add more room cards -->
+
+        <!-- Four Bed Room -->
+        <div class="bg-white p-6 rounded-3xl shadow hover:shadow-xl transition-all border border-[#EDE4D5]">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-2xl font-semibold text-[#0F3D2B]">B-312</h3>
+              <p class="text-[#4A7043] font-medium">Four Bed Room • Available</p>
+            </div>
+            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Available</span>
+          </div>
+          <p class="mt-4 text-3xl font-bold text-[#E65C3A]">৳ 2800 <span class="text-sm font-normal text-gray-500">/ person</span></p>
+          <ul class="mt-4 text-sm space-y-1 text-gray-600">
+            <li>✓ 4 Beds</li>
+            <li>✓ Common Bathroom</li>
+            <li>✓ Study Area</li>
+          </ul>
+          <button class="mt-6 w-full bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-3 rounded-2xl font-semibold">Book Now</button>
+        </div>
+
+        <!-- Dormitory -->
+        <div class="bg-white p-6 rounded-3xl shadow hover:shadow-xl transition-all border border-[#EDE4D5]">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-2xl font-semibold text-[#0F3D2B]">C-101</h3>
+              <p class="text-[#4A7043] font-medium">Dormitory • Available</p>
+            </div>
+            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Available</span>
+          </div>
+          <p class="mt-4 text-3xl font-bold text-[#E65C3A]">৳ 1800 <span class="text-sm font-normal text-gray-500">/ person</span></p>
+          <ul class="mt-4 text-sm space-y-1 text-gray-600">
+            <li>✓ 8-10 Beds</li>
+            <li>✓ Shared Facilities</li>
+            <li>✓ Budget Friendly</li>
+          </ul>
+          <button class="mt-6 w-full bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-3 rounded-2xl font-semibold">Book Now</button>
+        </div>
+
+        <!-- Booked Room -->
+        <div class="bg-white p-6 rounded-3xl shadow hover:shadow-xl transition-all border border-[#EDE4D5] opacity-75">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-2xl font-semibold text-[#0F3D2B]">A-108</h3>
+              <p class="text-red-600 font-medium">Single Room • Booked</p>
+            </div>
+            <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">Booked</span>
+          </div>
+          <p class="mt-4 text-3xl font-bold text-gray-400 line-through">৳ 4500 / month</p>
+          <p class="text-sm text-gray-500 mt-1">Booked by: Rahim Khan</p>
+          <button class="mt-6 w-full bg-gray-400 text-white py-3 rounded-2xl font-semibold cursor-not-allowed">Already Booked</button>
+        </div>
+
       </div>
     </div>
   </div>
