@@ -19,169 +19,134 @@
             sans: ['Inter', 'system-ui', 'sans-serif'],
           },
           colors: {
-            primary: {
-              50: '#f0f9ff',
-              500: '#22d3ee',   // Cyan
-              600: '#06b6d4',
-              700: '#0891b2',
-            },
-            navy: {
-              900: '#0f172a',
-              800: '#1e2937',
-              700: '#334155',
-            },
-            accent: {
-              indigo: '#6366f1',
-              violet: '#8b5cf6',
-              emerald: '#10b981',
-            }
-          },
-          boxShadow: {
-            'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+            sidebar: '#0F3D2B',
+            accent: '#E65C3A',
+            mainbg: '#F8F1E9',
+            card: '#FFFFFF',
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-navy-900 text-slate-200">
+<body class="bg-[#F8F1E9] text-[#1F2937]">
   <div class="flex min-h-screen">
     
     <!-- Sidebar -->
-    <div class="w-72 bg-navy-900 border-r border-slate-700 p-6 hidden md:block">
+    <div class="w-72 bg-[#0F3D2B] text-white p-6 hidden md:block">
       <div class="flex items-center gap-3 mb-12">
-        <div class="w-11 h-11 bg-primary-500 rounded-2xl flex items-center justify-center text-3xl shadow-lg">🏠</div>
-        <span class="text-3xl font-bold tracking-tighter text-white">HostelHub</span>
+        <div class="w-11 h-11 bg-[#E65C3A] rounded-2xl flex items-center justify-center text-3xl">🏠</div>
+        <span class="text-3xl font-bold">HMS Portal</span>
       </div>
       
       <nav class="space-y-2">
-        <a href="dashboard.html" class="nav-link active flex items-center gap-4 px-6 py-4 rounded-2xl text-white bg-navy-800">
-          <i class="fas fa-home w-5"></i> 
-          <span>Dashboard</span>
+        <a href="dashboard.html" class="nav-link active flex items-center gap-4 px-6 py-4 rounded-2xl bg-[#E65C3A] text-white">
+          <i class="fas fa-home w-5"></i> Dashboard
         </a>
-        <a href="rooms.html" class="nav-link flex items-center gap-4 px-6 py-4 rounded-2xl hover:bg-navy-800">
-          <i class="fas fa-bed w-5"></i> 
-          <span>Rooms</span>
+        <a href="rooms.html" class="nav-link flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl">
+          <i class="fas fa-bed w-5"></i> Rooms
         </a>
-        <a href="food.html" class="nav-link flex items-center gap-4 px-6 py-4 rounded-2xl hover:bg-navy-800">
-          <i class="fas fa-utensils w-5"></i> 
-          <span>Food Order</span>
+        <a href="food.html" class="nav-link flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl">
+          <i class="fas fa-utensils w-5"></i> Food Order
         </a>
-        <a href="complaint.html" class="nav-link flex items-center gap-4 px-6 py-4 rounded-2xl hover:bg-navy-800">
-          <i class="fas fa-exclamation-triangle w-5"></i> 
-          <span>Complaints</span>
+        <a href="complaint.html" class="nav-link flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl">
+          <i class="fas fa-exclamation-triangle w-5"></i> Complaints
         </a>
-        <a href="payment.html" class="nav-link flex items-center gap-4 px-6 py-4 rounded-2xl hover:bg-navy-800">
-          <i class="fas fa-money-bill w-5"></i> 
-          <span>Payments</span>
+        <a href="payment.html" class="nav-link flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl">
+          <i class="fas fa-money-bill w-5"></i> Payments
         </a>
-        <a href="notice.html" class="nav-link flex items-center gap-4 px-6 py-4 rounded-2xl hover:bg-navy-800">
-          <i class="fas fa-bullhorn w-5"></i> 
-          <span>Notices</span>
+        <a href="notice.html" class="nav-link flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl">
+          <i class="fas fa-bullhorn w-5"></i> Notices
         </a>
-        <a href="application.html" class="nav-link flex items-center gap-4 px-6 py-4 rounded-2xl hover:bg-navy-800">
-          <i class="fas fa-file-alt w-5"></i> 
-          <span>Applications</span>
+        <a href="application.html" class="nav-link flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl">
+          <i class="fas fa-file-alt w-5"></i> Applications
         </a>
       </nav>
     </div>
 
     <!-- Main Content -->
-    <div class="flex-1 p-6 md:p-10">
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
-        <h2 class="text-4xl font-semibold text-white">Welcome back, User 👋</h2>
+    <div class="flex-1 p-8">
+      <div class="flex justify-between items-center mb-10">
+        <h2 class="text-4xl font-semibold">Welcome back, User 👋</h2>
         <button onclick="window.location.href='login.html'" 
-                class="bg-red-500 hover:bg-red-600 px-8 py-3 rounded-2xl font-medium transition-all">
+                class="bg-[#E65C3A] hover:bg-[#d94e2f] text-white px-8 py-3 rounded-2xl font-medium">
           Logout
         </button>
       </div>
 
-      <!-- Stats Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-        <div class="glass-card p-6 rounded-3xl dashboard-card">
-          <h3 class="text-slate-400 text-sm font-medium">Room No</h3>
-          <p class="text-5xl font-bold text-primary-500 mt-3">A-205</p>
+      <!-- Stats -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-3xl shadow dashboard-card">
+          <h3 class="text-gray-600 text-sm">Room No</h3>
+          <p class="text-5xl font-bold text-[#0F3D2B] mt-3">A-205</p>
         </div>
-        <div class="glass-card p-6 rounded-3xl dashboard-card">
-          <h3 class="text-slate-400 text-sm font-medium">Due Payment</h3>
-          <p class="text-5xl font-bold text-orange-400 mt-3">৳ 2450</p>
+        <div class="bg-white p-6 rounded-3xl shadow dashboard-card">
+          <h3 class="text-gray-600 text-sm">Due Payment</h3>
+          <p class="text-5xl font-bold text-orange-600 mt-3">৳ 2450</p>
         </div>
-        <div class="glass-card p-6 rounded-3xl dashboard-card">
-          <h3 class="text-slate-400 text-sm font-medium">Food Orders</h3>
+        <div class="bg-white p-6 rounded-3xl shadow dashboard-card">
+          <h3 class="text-gray-600 text-sm">Food Orders</h3>
           <p class="text-5xl font-bold mt-3">8</p>
         </div>
-        <div class="glass-card p-6 rounded-3xl dashboard-card">
-          <h3 class="text-slate-400 text-sm font-medium">Complaints</h3>
-          <p class="text-5xl font-bold text-amber-400 mt-3">2</p>
+        <div class="bg-white p-6 rounded-3xl shadow dashboard-card">
+          <h3 class="text-gray-600 text-sm">Complaints</h3>
+          <p class="text-5xl font-bold text-amber-600 mt-3">2</p>
         </div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
         <!-- Recent Notices -->
-        <div class="glass-card p-8 rounded-3xl dashboard-card">
+        <div class="bg-white p-8 rounded-3xl shadow dashboard-card">
           <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
-            <i class="fas fa-bell text-primary-400"></i> Recent Notices
+            <i class="fas fa-bell text-[#E65C3A]"></i> Recent Notices
           </h3>
-          <ul class="space-y-5 text-slate-300">
-            <li class="flex gap-3"><span class="text-pink-400">📢</span> Mid-term exam schedule updated</li>
-            <li class="flex gap-3"><span class="text-pink-400">📢</span> Mess menu for next week</li>
+          <ul class="space-y-5">
+            <li class="flex gap-3"><span class="text-[#E65C3A]">📢</span> Mid-term exam schedule updated</li>
+            <li class="flex gap-3"><span class="text-[#E65C3A]">📢</span> Mess menu for next week</li>
           </ul>
         </div>
 
         <!-- Quick Actions -->
-        <div class="glass-card p-8 rounded-3xl dashboard-card">
+        <div class="bg-white p-8 rounded-3xl shadow dashboard-card">
           <h3 class="text-xl font-semibold mb-6">Quick Actions</h3>
           <div class="grid grid-cols-2 gap-4">
-            <button onclick="window.location.href='food.html'" 
-                    class="bg-primary-600 hover:bg-primary-700 py-6 rounded-2xl text-lg font-medium transition-all">
-              Order Food
-            </button>
-            <button onclick="window.location.href='complaint.html'" 
-                    class="bg-amber-600 hover:bg-amber-700 py-6 rounded-2xl text-lg font-medium transition-all">
-              File Complaint
-            </button>
-            <button onclick="window.location.href='payment.html'" 
-                    class="bg-emerald-600 hover:bg-emerald-700 py-6 rounded-2xl text-lg font-medium transition-all">
-              Pay Now
-            </button>
-            <button onclick="window.location.href='notice.html'" 
-                    class="bg-violet-600 hover:bg-violet-700 py-6 rounded-2xl text-lg font-medium transition-all">
-              View Notices
-            </button>
+            <button onclick="window.location.href='food.html'" class="bg-[#E65C3A] hover:bg-[#d94e2f] py-6 rounded-2xl text-white text-lg">Order Food</button>
+            <button onclick="window.location.href='complaint.html'" class="bg-amber-600 hover:bg-amber-700 py-6 rounded-2xl text-white text-lg">File Complaint</button>
+            <button onclick="window.location.href='payment.html'" class="bg-emerald-600 hover:bg-emerald-700 py-6 rounded-2xl text-white text-lg">Pay Now</button>
+            <button onclick="window.location.href='notice.html'" class="bg-violet-600 hover:bg-violet-700 py-6 rounded-2xl text-white text-lg">View Notices</button>
           </div>
         </div>
 
         <!-- My Applications -->
-        <div class="glass-card p-8 rounded-3xl dashboard-card">
+        <div class="bg-white p-8 rounded-3xl shadow dashboard-card">
           <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
-            <i class="fas fa-file-alt text-violet-400"></i> My Applications
+            <i class="fas fa-file-alt text-[#E65C3A]"></i> My Applications
           </h3>
           
           <div class="space-y-6">
-            <div class="bg-navy-800/60 p-5 rounded-2xl border border-slate-600">
-              <div class="flex justify-between items-start">
+            <div class="bg-gray-50 p-5 rounded-2xl">
+              <div class="flex justify-between">
                 <div>
                   <p class="font-semibold">Hostel Room Application</p>
-                  <p class="text-sm text-slate-400">APP-7842 • 05 June 2026</p>
+                  <p class="text-sm text-gray-500">APP-7842 • 05 June 2026</p>
                 </div>
-                <span class="bg-amber-500 text-black px-4 py-1 rounded-full text-sm font-medium">Pending</span>
+                <span class="bg-amber-400 text-black px-4 py-1 rounded-full text-sm">Pending</span>
               </div>
             </div>
 
-            <div class="bg-navy-800/60 p-5 rounded-2xl border border-slate-600">
-              <div class="flex justify-between items-start">
+            <div class="bg-gray-50 p-5 rounded-2xl">
+              <div class="flex justify-between">
                 <div>
                   <p class="font-semibold">Mess Registration</p>
-                  <p class="text-sm text-slate-400">APP-6521 • 28 May 2026</p>
+                  <p class="text-sm text-gray-500">APP-6521 • 28 May 2026</p>
                 </div>
-                <span class="bg-emerald-500 text-black px-4 py-1 rounded-full text-sm font-medium">Approved</span>
+                <span class="bg-emerald-500 text-white px-4 py-1 rounded-full text-sm">Approved</span>
               </div>
             </div>
           </div>
 
           <button onclick="window.location.href='application.html'" 
-                  class="mt-8 w-full bg-gradient-to-r from-primary-500 to-cyan-400 hover:from-primary-600 hover:to-cyan-500 py-4 rounded-2xl font-semibold text-lg transition-all">
+                  class="mt-8 w-full bg-[#E65C3A] hover:bg-[#d94e2f] py-4 rounded-2xl text-white font-semibold text-lg">
             New Application
           </button>
         </div>
