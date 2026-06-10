@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - HostelHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="bg-[#F8F1E9] text-[#1F2937]">
+  <div class="flex min-h-screen">
+    
+    <!-- Admin Sidebar -->
+    <div class="w-72 bg-[#0F3D2B] text-white p-6">
+      <div class="flex items-center gap-3 mb-12">
+        <div class="w-11 h-11 bg-[#E65C3A] rounded-2xl flex items-center justify-center text-3xl">👨‍💼</div>
+        <span class="text-3xl font-bold">Admin Panel</span>
+      </div>
+      
+      <nav class="space-y-2">
+        <a href="dashboard.html" class="flex items-center gap-4 px-6 py-4 bg-[#E65C3A] rounded-2xl"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="#" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-users"></i> Manage Students</a>
+        <a href="#" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-bed"></i> Manage Rooms</a>
+        <a href="#" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-utensils"></i> Food Menu</a>
+        <a href="#" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-file-alt"></i> Applications</a>
+        <a href="#" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-exclamation-triangle"></i> Complaints</a>
+        <a href="#" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-bullhorn"></i> Notices</a>
+        <a href="../index.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl text-red-400"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-8">
+      <h2 class="text-4xl font-bold mb-8">Admin Dashboard</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+        <div class="bg-white p-6 rounded-3xl shadow">Total Students: <span class="text-4xl font-bold text-[#0F3D2B]">245</span></div>
+        <div class="bg-white p-6 rounded-3xl shadow">Occupied Rooms: <span class="text-4xl font-bold text-[#E65C3A]">87</span></div>
+        <div class="bg-white p-6 rounded-3xl shadow">Pending Complaints: <span class="text-4xl font-bold text-amber-600">12</span></div>
+        <div class="bg-white p-6 rounded-3xl shadow">Total Due: <span class="text-4xl font-bold text-[#0F3D2B]">৳ 48,500</span></div>
+      </div>
+
+      <div class="bg-white p-8 rounded-3xl shadow">
+        <h3 class="text-2xl font-semibold mb-6">Recent Activities</h3>
+        <ul class="space-y-4 text-gray-700">
+          <li>• New Room Application from Rahim (A-205) - Pending</li>
+          <li>• Complaint resolved: Water issue in Block B</li>
+          <li>• Mess fee collected from 45 students</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
