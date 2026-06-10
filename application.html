@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,42 +7,48 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body class="bg-gray-950 text-white">
+<body class="bg-[#F8F1E9] text-[#1F2937]">
   <div class="flex min-h-screen">
+    
     <!-- Sidebar -->
-    <div class="w-72 bg-gray-900 p-6 hidden md:block">
-      <h1 class="text-3xl font-bold mb-10 text-cyan-400">HostelHub</h1>
-      <nav class="space-y-3">
-        <a href="dashboard.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-home"></i> Dashboard</a>
-        <a href="rooms.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-bed"></i> Rooms</a>
-        <a href="food.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-utensils"></i> Food Order</a>
-        <a href="complaint.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-exclamation-triangle"></i> Complaints</a>
-        <a href="payment.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-money-bill"></i> Payments</a>
-        <a href="notice.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-bullhorn"></i> Notices</a>
-        <a href="application.html" class="flex items-center gap-4 px-6 py-4 bg-gray-800 rounded-2xl"><i class="fas fa-file-alt"></i> Applications</a>
+    <div class="w-72 bg-[#0F3D2B] text-white p-6 hidden md:block">
+      <div class="flex items-center gap-3 mb-12">
+        <div class="w-11 h-11 bg-[#E65C3A] rounded-2xl flex items-center justify-center text-3xl">🏠</div>
+        <span class="text-3xl font-bold">HMS Portal</span>
+      </div>
+      
+      <nav class="space-y-2">
+        <a href="dashboard.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="rooms.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-bed"></i> Rooms</a>
+        <a href="food.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-utensils"></i> Food Order</a>
+        <a href="complaint.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-exclamation-triangle"></i> Complaints</a>
+        <a href="payment.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-money-bill"></i> Payments</a>
+        <a href="notice.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-bullhorn"></i> Notices</a>
+        <a href="application.html" class="flex items-center gap-4 px-6 py-4 bg-[#E65C3A] rounded-2xl"><i class="fas fa-file-alt"></i> Applications</a>
       </nav>
     </div>
 
     <!-- Main Content -->
     <div class="flex-1 p-8">
       <div class="flex justify-between items-center mb-10">
-        <h2 class="text-4xl font-bold">My Applications</h2>
-        <button onclick="window.location.href='dashboard.html'" 
-                class="bg-gray-700 hover:bg-gray-600 px-5 py-2 rounded-xl flex items-center gap-2">
+        <h2 class="text-4xl font-bold text-[#0F3D2B]">My Applications</h2>
+        <button onclick="window.location.href='dashboard.html'"
+                class="bg-[#4A7043] hover:bg-[#3d5a36] text-white px-5 py-2 rounded-xl flex items-center gap-2 transition-all">
           <i class="fas fa-arrow-left"></i> Back to Dashboard
         </button>
       </div>
 
       <!-- New Application Form -->
-      <div class="bg-gray-900 p-8 rounded-3xl mb-12">
-        <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-          <i class="fas fa-plus-circle text-cyan-400"></i> Submit New Application
+      <div class="bg-white p-8 rounded-3xl shadow mb-12">
+        <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3 text-[#0F3D2B]">
+          <i class="fas fa-plus-circle text-[#E65C3A]"></i> Submit New Application
         </h3>
-        
+       
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label class="block mb-2 text-gray-400">Application Type</label>
-            <select id="appType" class="w-full px-5 py-4 bg-gray-800 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500">
+            <label class="block mb-2 text-[#374151] font-medium">Application Type</label>
+            <select id="appType" 
+                    class="w-full px-5 py-4 bg-[#F8F1E9] border border-[#D1C7B5] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#E65C3A]">
               <option value="">Select Type</option>
               <option value="Room">Room Allocation</option>
               <option value="Mess">Mess Registration</option>
@@ -50,61 +56,61 @@
               <option value="Other">Others</option>
             </select>
           </div>
-          
+         
           <div>
-            <label class="block mb-2 text-gray-400">Application Date</label>
-            <input type="date" id="appDate" 
-                   class="w-full px-5 py-4 bg-gray-800 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500">
+            <label class="block mb-2 text-[#374151] font-medium">Application Date</label>
+            <input type="date" id="appDate"
+                   class="w-full px-5 py-4 bg-[#F8F1E9] border border-[#D1C7B5] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#E65C3A]">
           </div>
-
+          
           <div class="md:col-span-2">
-            <label class="block mb-2 text-gray-400">Details / Reason</label>
+            <label class="block mb-2 text-[#374151] font-medium">Details / Reason</label>
             <textarea id="appDetails" rows="5"
-                      class="w-full px-5 py-4 bg-gray-800 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      class="w-full px-5 py-4 bg-[#F8F1E9] border border-[#D1C7B5] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#E65C3A]"
                       placeholder="Write your application details here..."></textarea>
           </div>
         </div>
-
-        <button onclick="submitApplication()" 
-                class="mt-8 bg-cyan-500 hover:bg-cyan-600 px-10 py-4 rounded-2xl font-semibold text-lg">
+        
+        <button onclick="submitApplication()"
+                class="mt-8 bg-[#E65C3A] hover:bg-[#d94e2f] text-white px-10 py-4 rounded-2xl font-semibold text-lg w-full">
           Submit Application
         </button>
       </div>
 
-      <!-- My Applications List -->
-      <h3 class="text-2xl font-semibold mb-6">Previous Applications</h3>
+      <!-- Previous Applications -->
+      <h3 class="text-2xl font-semibold mb-6 text-[#0F3D2B]">Previous Applications</h3>
       <div class="space-y-6">
         <!-- Application 1 -->
-        <div class="bg-gray-900 p-7 rounded-3xl flex flex-col md:flex-row justify-between items-start gap-6">
+        <div class="bg-white p-7 rounded-3xl shadow flex flex-col md:flex-row justify-between items-start gap-6">
           <div class="flex-1">
             <div class="flex items-center gap-3">
-              <i class="fas fa-bed text-cyan-400 text-2xl"></i>
+              <i class="fas fa-bed text-[#E65C3A] text-2xl"></i>
               <div>
                 <h4 class="font-semibold text-lg">Room Allocation Request</h4>
-                <p class="text-sm text-gray-400">APP-7842 • 05 June 2026</p>
+                <p class="text-sm text-gray-500">APP-7842 • 05 June 2026</p>
               </div>
             </div>
-            <p class="mt-4 text-gray-300">Request for single room in Block A due to medical reasons.</p>
+            <p class="mt-4 text-gray-700">Request for single room in Block A due to medical reasons.</p>
           </div>
           <div class="text-right">
-            <span class="bg-yellow-500 text-black px-5 py-2 rounded-full text-sm font-medium">Pending</span>
+            <span class="bg-amber-400 text-black px-5 py-2 rounded-full text-sm font-medium">Pending</span>
           </div>
         </div>
 
         <!-- Application 2 -->
-        <div class="bg-gray-900 p-7 rounded-3xl flex flex-col md:flex-row justify-between items-start gap-6">
+        <div class="bg-white p-7 rounded-3xl shadow flex flex-col md:flex-row justify-between items-start gap-6">
           <div class="flex-1">
             <div class="flex items-center gap-3">
-              <i class="fas fa-utensils text-orange-400 text-2xl"></i>
+              <i class="fas fa-utensils text-[#E65C3A] text-2xl"></i>
               <div>
                 <h4 class="font-semibold text-lg">Mess Registration</h4>
-                <p class="text-sm text-gray-400">APP-6521 • 28 May 2026</p>
+                <p class="text-sm text-gray-500">APP-6521 • 28 May 2026</p>
               </div>
             </div>
-            <p class="mt-4 text-gray-300">Applied for monthly mess subscription.</p>
+            <p class="mt-4 text-gray-700">Applied for monthly mess subscription.</p>
           </div>
           <div class="text-right">
-            <span class="bg-green-500 text-black px-5 py-2 rounded-full text-sm font-medium">Approved</span>
+            <span class="bg-emerald-500 text-white px-5 py-2 rounded-full text-sm font-medium">Approved</span>
           </div>
         </div>
       </div>
@@ -115,12 +121,10 @@
     function submitApplication() {
       const type = document.getElementById('appType').value;
       const details = document.getElementById('appDetails').value;
-
       if (!type || !details) {
         alert("Please select application type and write details.");
         return;
       }
-
       alert(`✅ Application Submitted Successfully!\n\nType: ${type}\nWe will review your application soon.`);
       
       // Reset form
