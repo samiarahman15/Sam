@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - HostelHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="bg-[#F8F1E9] min-h-screen flex items-center justify-center">
+  <div class="max-w-md w-full bg-white p-10 rounded-3xl shadow-2xl">
+    <div class="flex justify-center mb-8">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-[#0F3D2B] rounded-2xl flex items-center justify-center text-3xl">🔑</div>
+        <h1 class="text-3xl font-bold text-[#0F3D2B]">Admin Panel</h1>
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold text-center mb-8">Admin Login</h2>
+
+    <div class="space-y-6">
+      <div>
+        <label class="block mb-2 font-medium">Admin ID / Email</label>
+        <input type="text" class="w-full px-5 py-4 bg-[#F8F1E9] border border-[#D1C7B5] rounded-2xl focus:ring-2 focus:ring-[#E65C3A]" placeholder="admin@hostel.edu">
+      </div>
+      <div>
+        <label class="block mb-2 font-medium">Password</label>
+        <input type="password" class="w-full px-5 py-4 bg-[#F8F1E9] border border-[#D1C7B5] rounded-2xl focus:ring-2 focus:ring-[#E65C3A]" placeholder="••••••••">
+      </div>
+
+      <button onclick="window.location.href='dashboard.html'" 
+              class="w-full bg-[#0F3D2B] hover:bg-black text-white py-4 rounded-2xl font-semibold text-lg">
+        Login as Admin
+      </button>
+    </div>
+
+    <p class="text-center mt-6 text-sm">
+      <a href="../login.html" class="text-[#E65C3A] hover:underline">← Back to Student Login</a>
+    </p>
+  </div>
+</body>
+</html>
