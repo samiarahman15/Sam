@@ -1,24 +1,50 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Payment - HostelHub</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body class="bg-gray-950 text-white min-h-screen">
-  <div class="max-w-2xl mx-auto mt-20 bg-gray-900 p-10 rounded-3xl">
-    <h2 class="text-4xl font-bold text-center mb-10">Make Payment</h2>
+<body class="bg-[#F8F1E9] text-[#1F2937] min-h-screen">
+  <div class="max-w-2xl mx-auto mt-20 bg-white p-10 rounded-3xl shadow-2xl border border-[#EDE4D5]">
     
-    <div class="bg-gray-800 p-8 rounded-2xl mb-8">
-      <p class="text-lg">Total Due: <span class="text-3xl font-bold text-orange-400">৳ 2450</span></p>
+    <!-- Header -->
+    <div class="flex justify-center mb-8">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-[#4A7043] rounded-2xl flex items-center justify-center text-3xl">🏠</div>
+        <h1 class="text-3xl font-bold text-[#4A7043]">HostelHub</h1>
+      </div>
+    </div>
+
+    <h2 class="text-4xl font-bold text-center mb-10 text-[#0F3D2B]">Make Payment</h2>
+   
+    <div class="bg-[#F8F1E9] p-8 rounded-2xl mb-8 border border-[#D1C7B5]">
+      <p class="text-lg text-[#374151]">Total Due Amount</p>
+      <p class="text-5xl font-bold text-[#E65C3A] mt-2">৳ 2450</p>
     </div>
 
     <div class="space-y-6">
-      <button class="w-full bg-emerald-600 hover:bg-emerald-700 py-5 text-xl rounded-2xl">Pay with bKash</button>
-      <button class="w-full bg-blue-600 hover:bg-blue-700 py-5 text-xl rounded-2xl">Pay with Nagad</button>
-      <button class="w-full bg-cyan-500 hover:bg-cyan-600 py-5 text-xl rounded-2xl">Card Payment</button>
+      <button onclick="alert('Redirecting to bKash...')" 
+              class="w-full bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-5 text-xl rounded-2xl font-semibold flex items-center justify-center gap-3 transition-all">
+        <i class="fas fa-mobile-alt"></i> Pay with bKash
+      </button>
+      
+      <button onclick="alert('Redirecting to Nagad...')" 
+              class="w-full bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-5 text-xl rounded-2xl font-semibold flex items-center justify-center gap-3 transition-all">
+        <i class="fas fa-mobile-alt"></i> Pay with Nagad
+      </button>
+      
+      <button onclick="alert('Redirecting to Card Payment...')" 
+              class="w-full bg-[#4A7043] hover:bg-[#3d5a36] text-white py-5 text-xl rounded-2xl font-semibold flex items-center justify-center gap-3 transition-all">
+        <i class="fas fa-credit-card"></i> Card Payment
+      </button>
     </div>
+
+    <p class="text-center text-gray-500 mt-8 text-sm">
+      Secure Payment Powered by HostelHub
+    </p>
   </div>
 </body>
 </html>
