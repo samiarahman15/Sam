@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Rooms - Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="bg-[#F8F1E9]">
+  <div class="flex min-h-screen">
+    
+    <!-- Sidebar -->
+    <div class="w-72 bg-[#0F3D2B] text-white p-6">
+      <div class="flex items-center gap-3 mb-10">
+        <div class="w-12 h-12 bg-[#E65C3A] rounded-2xl flex items-center justify-center text-3xl">👨‍💼</div>
+        <h1 class="text-2xl font-bold">Admin Panel</h1>
+      </div>
+      
+      <nav class="space-y-2">
+        <a href="dashboard.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="manage-students.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-users"></i> Manage Students</a>
+        <a href="manage-rooms.html" class="flex items-center gap-4 px-6 py-4 bg-[#E65C3A] rounded-2xl"><i class="fas fa-bed"></i> Manage Rooms</a>
+        <a href="food-menu.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-utensils"></i> Food Menu</a>
+        <a href="applications.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-file-alt"></i> Applications</a>
+        <a href="complaints.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-exclamation-triangle"></i> Complaints</a>
+        <a href="notices.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-bullhorn"></i> Notices</a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-8">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-4xl font-bold text-[#0F3D2B]">Manage Rooms</h2>
+        <button class="bg-[#E65C3A] hover:bg-[#d94e2f] text-white px-6 py-3 rounded-2xl flex items-center gap-2">
+          <i class="fas fa-plus"></i> Add New Room
+        </button>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow overflow-hidden">
+        <table class="w-full">
+          <thead class="bg-[#0F3D2B] text-white">
+            <tr>
+              <th class="text-left py-5 px-8 font-medium">Room No</th>
+              <th class="text-left py-5 px-8 font-medium">Type</th>
+              <th class="text-left py-5 px-8 font-medium">Capacity</th>
+              <th class="text-left py-5 px-8 font-medium">Current Occupants</th>
+              <th class="text-left py-5 px-8 font-medium">Status</th>
+              <th class="text-center py-5 px-8 font-medium">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700 divide-y">
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="py-5 px-8 font-medium">A-205</td>
+              <td class="py-5 px-8">Single Room</td>
+              <td class="py-5 px-8">1 Person</td>
+              <td class="py-5 px-8">1 / 1</td>
+              <td class="py-5 px-8">
+                <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-medium">Occupied</span>
+              </td>
+              <td class="text-center">
+                <button class="text-[#E65C3A] hover:text-[#d94e2f] mr-4"><i class="fas fa-edit"></i></button>
+                <button class="text-red-500 hover:text-red-600"><i class="fas fa-trash"></i></button>
+              </td>
+            </tr>
+            
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="py-5 px-8 font-medium">B-312</td>
+              <td class="py-5 px-8">Four Bed Room</td>
+              <td class="py-5 px-8">4 Persons</td>
+              <td class="py-5 px-8">2 / 4</td>
+              <td class="py-5 px-8">
+                <span class="bg-yellow-100 text-yellow-700 px-4 py-1 rounded-full text-sm font-medium">Partially Occupied</span>
+              </td>
+              <td class="text-center">
+                <button class="text-[#E65C3A] hover:text-[#d94e2f] mr-4"><i class="fas fa-edit"></i></button>
+                <button class="text-red-500 hover:text-red-600"><i class="fas fa-trash"></i></button>
+              </td>
+            </tr>
+            
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="py-5 px-8 font-medium">C-101</td>
+              <td class="py-5 px-8">Dormitory</td>
+              <td class="py-5 px-8">10 Persons</td>
+              <td class="py-5 px-8">6 / 10</td>
+              <td class="py-5 px-8">
+                <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-medium">Occupied</span>
+              </td>
+              <td class="text-center">
+                <button class="text-[#E65C3A] hover:text-[#d94e2f] mr-4"><i class="fas fa-edit"></i></button>
+                <button class="text-red-500 hover:text-red-600"><i class="fas fa-trash"></i></button>
+              </td>
+            </tr>
+            
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="py-5 px-8 font-medium">A-108</td>
+              <td class="py-5 px-8">Single Room</td>
+              <td class="py-5 px-8">1 Person</td>
+              <td class="py-5 px-8">0 / 1</td>
+              <td class="py-5 px-8">
+                <span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-sm font-medium">Available</span>
+              </td>
+              <td class="text-center">
+                <button class="text-[#E65C3A] hover:text-[#d94e2f] mr-4"><i class="fas fa-edit"></i></button>
+                <button class="text-red-500 hover:text-red-600"><i class="fas fa-trash"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
