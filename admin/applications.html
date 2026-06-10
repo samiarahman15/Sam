@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Applications - Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="bg-[#F8F1E9]">
+  <div class="flex min-h-screen">
+    
+    <!-- Sidebar -->
+    <div class="w-72 bg-[#0F3D2B] text-white p-6">
+      <div class="flex items-center gap-3 mb-10">
+        <div class="w-12 h-12 bg-[#E65C3A] rounded-2xl flex items-center justify-center text-3xl">👨‍💼</div>
+        <h1 class="text-2xl font-bold">Admin Panel</h1>
+      </div>
+      
+      <nav class="space-y-2">
+        <a href="dashboard.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="manage-students.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-users"></i> Manage Students</a>
+        <a href="manage-rooms.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-bed"></i> Manage Rooms</a>
+        <a href="food-menu.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-utensils"></i> Food Menu</a>
+        <a href="applications.html" class="flex items-center gap-4 px-6 py-4 bg-[#E65C3A] rounded-2xl"><i class="fas fa-file-alt"></i> Applications</a>
+        <a href="complaints.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-exclamation-triangle"></i> Complaints</a>
+        <a href="notices.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-bullhorn"></i> Notices</a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-8">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-4xl font-bold text-[#0F3D2B]">Student Applications</h2>
+        <button class="bg-[#E65C3A] hover:bg-[#d94e2f] text-white px-6 py-3 rounded-2xl flex items-center gap-2">
+          <i class="fas fa-filter"></i> Filter
+        </button>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow overflow-hidden">
+        <table class="w-full">
+          <thead class="bg-[#0F3D2B] text-white">
+            <tr>
+              <th class="text-left py-5 px-8 font-medium">Application ID</th>
+              <th class="text-left py-5 px-8 font-medium">Student Name</th>
+              <th class="text-left py-5 px-8 font-medium">Type</th>
+              <th class="text-left py-5 px-8 font-medium">Applied Date</th>
+              <th class="text-left py-5 px-8 font-medium">Status</th>
+              <th class="text-center py-5 px-8 font-medium">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700 divide-y">
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="py-5 px-8 font-medium">APP-7842</td>
+              <td class="py-5 px-8">Oishi Das</td>
+              <td class="py-5 px-8">Room Allocation</td>
+              <td class="py-5 px-8">05 June 2026</td>
+              <td class="py-5 px-8">
+                <span class="bg-amber-100 text-amber-700 px-4 py-1 rounded-full text-sm font-medium">Pending</span>
+              </td>
+              <td class="text-center">
+                <button class="text-[#E65C3A] hover:text-[#d94e2f] mr-4"><i class="fas fa-eye"></i></button>
+                <button class="text-green-600 hover:text-green-700 mr-4"><i class="fas fa-check"></i></button>
+                <button class="text-red-500 hover:text-red-600"><i class="fas fa-times"></i></button>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="py-5 px-8 font-medium">APP-6521</td>
+              <td class="py-5 px-8">Tasmia Khan</td>
+              <td class="py-5 px-8">Mess Registration</td>
+              <td class="py-5 px-8">28 May 2026</td>
+              <td class="py-5 px-8">
+                <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-medium">Approved</span>
+              </td>
+              <td class="text-center">
+                <button class="text-[#E65C3A] hover:text-[#d94e2f] mr-4"><i class="fas fa-eye"></i></button>
+                <button class="text-green-600 hover:text-green-700 mr-4"><i class="fas fa-check"></i></button>
+                <button class="text-red-500 hover:text-red-600"><i class="fas fa-times"></i></button>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="py-5 px-8 font-medium">APP-7391</td>
+              <td class="py-5 px-8">Samia Ahmed</td>
+              <td class="py-5 px-8">Leave Request</td>
+              <td class="py-5 px-8">07 June 2026</td>
+              <td class="py-5 px-8">
+                <span class="bg-yellow-100 text-yellow-700 px-4 py-1 rounded-full text-sm font-medium">Under Review</span>
+              </td>
+              <td class="text-center">
+                <button class="text-[#E65C3A] hover:text-[#d94e2f] mr-4"><i class="fas fa-eye"></i></button>
+                <button class="text-green-600 hover:text-green-700 mr-4"><i class="fas fa-check"></i></button>
+                <button class="text-red-500 hover:text-red-600"><i class="fas fa-times"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
