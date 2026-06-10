@@ -1,42 +1,83 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up - HostelHub</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body class="bg-gray-950 text-white min-h-screen flex items-center justify-center">
-  <div class="max-w-lg w-full bg-gray-900 p-10 rounded-3xl">
-    <h2 class="text-4xl font-bold text-center mb-8">Student Registration</h2>
+<body class="bg-[#F8F1E9] text-[#1F2937] min-h-screen flex items-center justify-center">
+  <div class="max-w-lg w-full bg-white p-10 rounded-3xl shadow-2xl border border-[#EDE4D5]">
     
-    <div class="grid grid-cols-2 gap-6">
-      <div class="col-span-2 md:col-span-1">
-        <label>Student Name</label>
-        <input type="text" class="w-full px-5 py-3 bg-gray-800 rounded-2xl mt-2">
-      </div>
-      <div class="col-span-2 md:col-span-1">
-        <label>Student ID</label>
-        <input type="text" class="w-full px-5 py-3 bg-gray-800 rounded-2xl mt-2">
-      </div>
-      <div class="col-span-2">
-        <label>Email</label>
-        <input type="email" class="w-full px-5 py-3 bg-gray-800 rounded-2xl mt-2">
-      </div>
-      <div class="col-span-2 md:col-span-1">
-        <label>Phone</label>
-        <input type="tel" class="w-full px-5 py-3 bg-gray-800 rounded-2xl mt-2">
-      </div>
-      <div class="col-span-2 md:col-span-1">
-        <label>Department</label>
-        <input type="text" class="w-full px-5 py-3 bg-gray-800 rounded-2xl mt-2">
+    <!-- Header -->
+    <div class="flex justify-center mb-8">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-[#4A7043] rounded-2xl flex items-center justify-center text-3xl">🏠</div>
+        <h1 class="text-3xl font-bold text-[#4A7043]">HostelHub</h1>
       </div>
     </div>
 
-    <button onclick="window.location.href='dashboard.html'" 
-            class="w-full mt-8 bg-cyan-500 hover:bg-cyan-600 py-4 rounded-2xl font-semibold">
+    <h2 class="text-4xl font-bold text-center mb-8 text-[#1F2937]">Student Registration</h2>
+   
+    <div class="grid grid-cols-2 gap-6">
+      <div class="col-span-2 md:col-span-1">
+        <label class="block mb-2 text-[#374151] font-medium">Student Name</label>
+        <input type="text" 
+               class="w-full px-5 py-4 bg-[#F8F1E9] border border-[#D1C7B5] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#E65C3A]" 
+               placeholder="Full Name">
+      </div>
+      <div class="col-span-2 md:col-span-1">
+        <label class="block mb-2 text-[#374151] font-medium">Student ID</label>
+        <input type="text" 
+               class="w-full px-5 py-4 bg-[#F8F1E9] border border-[#D1C7B5] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#E65C3A]" 
+               placeholder="e.g. 2023-4567">
+      </div>
+      <div class="col-span-2">
+        <label class="block mb-2 text-[#374151] font-medium">Email</label>
+        <input type="email" 
+               class="w-full px-5 py-4 bg-[#F8F1E9] border border-[#D1C7B5] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#E65C3A]" 
+               placeholder="student@university.edu">
+      </div>
+      <div class="col-span-2 md:col-span-1">
+        <label class="block mb-2 text-[#374151] font-medium">Phone</label>
+        <input type="tel" 
+               class="w-full px-5 py-4 bg-[#F8F1E9] border border-[#D1C7B5] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#E65C3A]" 
+               placeholder="+880 1XXX-XXXXXX">
+      </div>
+      <div class="col-span-2 md:col-span-1">
+        <label class="block mb-2 text-[#374151] font-medium">Department</label>
+        <input type="text" 
+               class="w-full px-5 py-4 bg-[#F8F1E9] border border-[#D1C7B5] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#E65C3A]" 
+               placeholder="e.g. CSE, EEE">
+      </div>
+
+      <!-- New Password Field -->
+      <div class="col-span-2">
+        <label class="block mb-2 text-[#374151] font-medium">Password</label>
+        <input type="password" 
+               class="w-full px-5 py-4 bg-[#F8F1E9] border border-[#D1C7B5] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#E65C3A]" 
+               placeholder="Create a strong password">
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="col-span-2">
+        <label class="block mb-2 text-[#374151] font-medium">Confirm Password</label>
+        <input type="password" 
+               class="w-full px-5 py-4 bg-[#F8F1E9] border border-[#D1C7B5] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#E65C3A]" 
+               placeholder="Confirm your password">
+      </div>
+    </div>
+
+    <button onclick="window.location.href='dashboard.html'"
+            class="w-full mt-8 bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-4 rounded-2xl font-semibold text-lg transition-all">
       Create Account
     </button>
+
+    <p class="text-center mt-6 text-[#374151]">
+      Already have an account? 
+      <a href="login.html" class="text-[#E65C3A] hover:underline font-medium">Login</a>
+    </p>
   </div>
 </body>
 </html>
