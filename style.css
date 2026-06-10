@@ -1,0 +1,39 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: rgba(30, 41, 55, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.nav-link {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover {
+  background-color: #1e2937;
+  color: #67e8f9;
+  transform: translateX(6px);
+}
+
+.nav-link.active {
+  background-color: #1e40af;
+  color: white;
+  box-shadow: 0 0 0 4px rgba(103, 232, 249, 0.2);
+}
+
+/* Hover Lift Effect */
+.dashboard-card {
+  transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+}
