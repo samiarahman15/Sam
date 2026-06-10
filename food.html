@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,59 +7,102 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body class="bg-gray-950 text-white">
+<body class="bg-[#F8F1E9] text-[#1F2937]">
   <div class="flex min-h-screen">
+    
+    <!-- Sidebar -->
+    <div class="w-72 bg-[#0F3D2B] text-white p-6 hidden md:block">
+      <div class="flex items-center gap-3 mb-12">
+        <div class="w-11 h-11 bg-[#E65C3A] rounded-2xl flex items-center justify-center text-3xl">🏠</div>
+        <span class="text-3xl font-bold">HMS Portal</span>
+      </div>
+      <nav class="space-y-2">
+        <a href="dashboard.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="rooms.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-bed"></i> Rooms</a>
+        <a href="food.html" class="flex items-center gap-4 px-6 py-4 bg-[#E65C3A] rounded-2xl"><i class="fas fa-utensils"></i> Food Order</a>
+        <a href="complaint.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-exclamation-triangle"></i> Complaints</a>
+        <a href="payment.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-money-bill"></i> Payments</a>
+        <a href="notice.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-bullhorn"></i> Notices</a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
     <div class="flex-1 p-8">
-      <h2 class="text-4xl font-bold mb-8">Food Menu</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <div class="bg-gray-900 p-6 rounded-3xl text-center flex flex-col justify-between items-center">
-          <div>
-            <i class="fas fa-bowl-food text-5xl mb-4 text-orange-400"></i>
-            <h3 class="text-xl">Biriyani</h3>
-            <p class="text-2xl font-bold mt-2">৳ 120</p>
-          </div>
-          <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 w-full py-3 rounded-2xl transition duration-200">Add to Cart</button>
-        </div>
+      <h2 class="text-4xl font-bold mb-10 text-[#0F3D2B]">Food Menu</h2>
 
-        <div class="bg-gray-900 p-6 rounded-3xl text-center flex flex-col justify-between items-center">
-          <div>
-            <i class="fas fa-bowl-food text-5xl mb-4 text-orange-400"></i>
-            <h3 class="text-xl">Rice, Dal and Curry</h3>
-            <p class="text-2xl font-bold mt-2">৳ 160</p>
-          </div>
-          <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 w-full py-3 rounded-2xl transition duration-200">Add to Cart</button>
+      <!-- Breakfast -->
+      <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3 text-[#4A7043]">
+        <i class="fas fa-sun"></i> Breakfast
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-3xl shadow hover:shadow-xl transition-all">
+          <h4 class="font-semibold text-lg">Ruti + Bhaji</h4>
+          <p class="text-2xl font-bold text-[#E65C3A] mt-2">৳ 60</p>
+          <button onclick="alert('Added to Cart!')" class="mt-4 w-full bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-3 rounded-2xl">Add to Cart</button>
         </div>
+      </div>
 
-        <div class="bg-gray-900 p-6 rounded-3xl text-center flex flex-col justify-between items-center">
-          <div>
-            <i class="fas fa-bowl-food text-5xl mb-4 text-orange-400"></i>
-            <h3 class="text-xl">Khichuri</h3>
-            <p class="text-2xl font-bold mt-2">৳ 70</p>
-          </div>
-          <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 w-full py-3 rounded-2xl transition duration-200">Add to Cart</button>
+      <!-- Lunch / Meal -->
+      <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3 text-[#4A7043]">
+        <i class="fas fa-utensils"></i> Lunch / Meal
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-3xl shadow hover:shadow-xl transition-all">
+          <h4 class="font-semibold text-lg">Rice + Fish Curry + Dal</h4>
+          <p class="text-2xl font-bold text-[#E65C3A] mt-2">৳ 140</p>
+          <button onclick="alert('Added to Cart!')" class="mt-4 w-full bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-3 rounded-2xl">Add to Cart</button>
         </div>
-
-        <div class="bg-gray-900 p-6 rounded-3xl text-center flex flex-col justify-between items-center">
-          <div>
-            <i class="fas fa-pizza-slice text-5xl mb-4 text-orange-400"></i>
-            <h3 class="text-xl">Pizza</h3>
-            <p class="text-2xl font-bold mt-2">৳ 200</p>
-          </div>
-          <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 w-full py-3 rounded-2xl transition duration-200">Add to Cart</button>
+        <div class="bg-white p-6 rounded-3xl shadow hover:shadow-xl transition-all">
+          <h4 class="font-semibold text-lg">Rice + Chicken Curry</h4>
+          <p class="text-2xl font-bold text-[#E65C3A] mt-2">৳ 160</p>
+          <button onclick="alert('Added to Cart!')" class="mt-4 w-full bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-3 rounded-2xl">Add to Cart</button>
         </div>
-
-        <div class="bg-gray-900 p-6 rounded-3xl text-center flex flex-col justify-between items-center">
-          <div>
-            <i class="fas fa-hamburger text-5xl mb-4 text-orange-400"></i>
-            <h3 class="text-xl">Burger</h3>
-            <p class="text-2xl font-bold mt-2">৳ 60</p>
-          </div>
-          <button onclick="alert('Added to cart!')" class="mt-4 bg-green-600 hover:bg-green-700 w-full py-3 rounded-2xl transition duration-200">Add to Cart</button>
+        <div class="bg-white p-6 rounded-3xl shadow hover:shadow-xl transition-all">
+          <h4 class="font-semibold text-lg">Khichuri (Friday Special)</h4>
+          <p class="text-2xl font-bold text-[#E65C3A] mt-2">৳ 110</p>
+          <button onclick="alert('Added to Cart!')" class="mt-4 w-full bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-3 rounded-2xl">Add to Cart</button>
         </div>
+        <div class="bg-white p-6 rounded-3xl shadow hover:shadow-xl transition-all">
+          <h4 class="font-semibold text-lg">Biriyani (Monday Special)</h4>
+          <p class="text-2xl font-bold text-[#E65C3A] mt-2">৳ 180</p>
+          <button onclick="alert('Added to Cart!')" class="mt-4 w-full bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-3 rounded-2xl">Add to Cart</button>
+        </div>
+      </div>
 
-        </div> </div>
+      <!-- Evening Snacks -->
+      <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3 text-[#4A7043]">
+        <i class="fas fa-coffee"></i> Evening Snacks
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-3xl shadow hover:shadow-xl transition-all">
+          <h4 class="font-semibold text-lg">Tea + Biscuit</h4>
+          <p class="text-2xl font-bold text-[#E65C3A] mt-2">৳ 40</p>
+          <button onclick="alert('Added to Cart!')" class="mt-4 w-full bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-3 rounded-2xl">Add to Cart</button>
+        </div>
+        <div class="bg-white p-6 rounded-3xl shadow hover:shadow-xl transition-all">
+          <h4 class="font-semibold text-lg">Butter Bun + Banana</h4>
+          <p class="text-2xl font-bold text-[#E65C3A] mt-2">৳ 50</p>
+          <button onclick="alert('Added to Cart!')" class="mt-4 w-full bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-3 rounded-2xl">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Dinner -->
+      <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3 text-[#4A7043]">
+        <i class="fas fa-moon"></i> Dinner
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-3xl shadow hover:shadow-xl transition-all">
+          <h4 class="font-semibold text-lg">Rice + Vegetable + Dal</h4>
+          <p class="text-2xl font-bold text-[#E65C3A] mt-2">৳ 130</p>
+          <button onclick="alert('Added to Cart!')" class="mt-4 w-full bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-3 rounded-2xl">Add to Cart</button>
+        </div>
+        <div class="bg-white p-6 rounded-3xl shadow hover:shadow-xl transition-all">
+          <h4 class="font-semibold text-lg">Rice + Egg + Dal</h4>
+          <p class="text-2xl font-bold text-[#E65C3A] mt-2">৳ 120</p>
+          <button onclick="alert('Added to Cart!')" class="mt-4 w-full bg-[#E65C3A] hover:bg-[#d94e2f] text-white py-3 rounded-2xl">Add to Cart</button>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
