@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Status - HostelHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="bg-gray-950 text-white">
+  <div class="flex min-h-screen">
+    <div class="flex-1 p-8">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-4xl font-bold">Hostel Applications</h2>
+        <button onclick="alert('Opening Application Form!')" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-2xl flex items-center gap-2 transition duration-200">
+          <i class="fas fa-plus"></i> New Application
+        </button>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <div class="lg:col-span-1 flex flex-col gap-6">
+          <div class="bg-gray-900 p-6 rounded-3xl border border-gray-800">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-gray-400 font-medium">Current Status</h3>
+              <i class="fas fa-file-alt text-2xl text-blue-400"></i>
+            </div>
+            <p class="text-3xl font-bold text-yellow-400">Pending Review</p>
+            <p class="text-sm text-gray-500 mt-2">Application ID: #APP-8842</p>
+          </div>
+
+          <div class="bg-gray-900 p-6 rounded-3xl border border-gray-800">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-gray-400 font-medium">Submission Date</h3>
+              <i class="fas fa-calendar-alt text-2xl text-green-400"></i>
+            </div>
+            <p class="text-2xl font-bold">10 June, 2026</p>
+            <p class="text-sm text-gray-500 mt-2">Applied at 09:15 AM</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2 bg-gray-900 p-6 rounded-3xl border border-gray-800">
+          <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+            <i class="fas fa-history text-gray-400"></i> Application History
+          </h3>
+          
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-gray-800 text-gray-400 text-sm">
+                  <th class="pb-3 font-semibold">Application ID</th>
+                  <th class="pb-3 font-semibold">Type / Title</th>
+                  <th class="pb-3 font-semibold">Date</th>
+                  <th class="pb-3 font-semibold text-right">Status</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-800/50 text-sm">
+                <tr>
+                  <td class="py-4 font-mono text-blue-400">#APP-8842</td>
+                  <td class="py-4 font-medium">Seat Allocation (Room Change)</td>
+                  <td class="py-4 text-gray-400">10 Jun 2026</td>
+                  <td class="py-4 text-right">
+                    <span class="bg-yellow-500/10 text-yellow-500 px-3 py-1 rounded-full text-xs font-medium">Pending</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-4 font-mono text-blue-400">#APP-7610</td>
+                  <td class="py-4 font-medium">Mess Subsidy Renewal</td>
+                  <td class="py-4 text-gray-400">02 Jan 2026</td>
+                  <td class="py-4 text-right">
+                    <span class="bg-green-500/10 text-green-500 px-3 py-1 rounded-full text-xs font-medium">Approved</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-4 font-mono text-blue-400">#APP-5122</td>
+                  <td class="py-4 font-medium">Hostel Admission Intake</td>
+                  <td class="py-4 text-gray-400">15 Nov 2025</td>
+                  <td class="py-4 text-right">
+                    <span class="bg-green-500/10 text-green-500 px-3 py-1 rounded-full text-xs font-medium">Approved</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div> </div> </div>
+  </div>
+</body>
+</html>
