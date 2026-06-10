@@ -9,16 +9,36 @@
 </head>
 <body class="bg-gray-950 text-white">
   <div class="flex min-h-screen">
-    <!-- Sidebar -->
-    <div class="w-72 bg-gray-900 p-6 hidden md:block">
-      <h1 class="text-3xl font-bold mb-10 text-cyan-400">HostelHub</h1>
-      <nav class="space-y-3">
-        <a href="dashboard.html" class="flex items-center gap-4 px-6 py-4 bg-gray-800 rounded-2xl"><i class="fas fa-home"></i> Dashboard</a>
-        <a href="rooms.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-bed"></i> Rooms</a>
-        <a href="food.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-utensils"></i> Food Order</a>
-        <a href="complaint.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-exclamation-triangle"></i> Complaints</a>
-        <a href="payment.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-money-bill"></i> Payments</a>
-        <a href="notice.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-bullhorn"></i> Notices</a>
+    
+    <!-- Sidebar (Updated to match your image) -->
+    <div class="w-72 bg-[#0F172A] p-6 hidden md:block border-r border-gray-800">
+      <div class="flex items-center gap-3 mb-10">
+        <span class="text-3xl font-bold text-cyan-400">HostelHub</span>
+      </div>
+      
+      <nav class="space-y-2">
+        <a href="dashboard.html" class="flex items-center gap-4 px-6 py-4 bg-[#1E2937] rounded-xl text-white">
+          <i class="fas fa-home"></i> Dashboard
+        </a>
+        <a href="rooms.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-xl">
+          <i class="fas fa-bed"></i> Rooms
+        </a>
+        <a href="food.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-xl">
+          <i class="fas fa-utensils"></i> Food Order
+        </a>
+        <a href="complaint.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-xl">
+          <i class="fas fa-exclamation-triangle"></i> Complaints
+        </a>
+        <a href="payment.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-xl">
+          <i class="fas fa-money-bill"></i> Payments
+        </a>
+        <a href="notice.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-xl">
+          <i class="fas fa-bullhorn"></i> Notices
+        </a>
+        <!-- Applications Link Added -->
+        <a href="application.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-xl">
+          <i class="fas fa-file-alt"></i> Applications
+        </a>
       </nav>
     </div>
 
@@ -26,88 +46,85 @@
     <div class="flex-1 p-8">
       <div class="flex justify-between items-center mb-10">
         <h2 class="text-4xl font-bold">Welcome back, User 👋</h2>
-        <div class="flex items-center gap-4">
-          <button onclick="window.location.href='login.html'" 
-                  class="bg-red-500 hover:bg-red-600 px-6 py-2 rounded-xl">Logout</button>
-        </div>
+        <button onclick="window.location.href='login.html'" 
+                class="bg-red-500 hover:bg-red-600 px-6 py-3 rounded-xl font-medium">
+          Logout
+        </button>
       </div>
 
       <!-- Quick Stats -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
-        <div class="bg-gray-900 p-6 rounded-3xl">
-          <h3 class="text-cyan-400">Room No</h3>
-          <p class="text-4xl font-bold">A-205</p>
+        <div class="bg-[#1E2937] p-6 rounded-3xl">
+          <h3 class="text-cyan-400 text-sm">Room No</h3>
+          <p class="text-4xl font-bold mt-2">A-205</p>
         </div>
-        <div class="bg-gray-900 p-6 rounded-3xl">
-          <h3 class="text-cyan-400">Due Payment</h3>
-          <p class="text-4xl font-bold text-orange-400">৳ 2450</p>
+        <div class="bg-[#1E2937] p-6 rounded-3xl">
+          <h3 class="text-cyan-400 text-sm">Due Payment</h3>
+          <p class="text-4xl font-bold mt-2 text-orange-400">৳ 2450</p>
         </div>
-        <div class="bg-gray-900 p-6 rounded-3xl">
-          <h3 class="text-cyan-400">Food Orders</h3>
-          <p class="text-4xl font-bold">8</p>
+        <div class="bg-[#1E2937] p-6 rounded-3xl">
+          <h3 class="text-cyan-400 text-sm">Food Orders</h3>
+          <p class="text-4xl font-bold mt-2">8</p>
         </div>
-        <div class="bg-gray-900 p-6 rounded-3xl">
-          <h3 class="text-cyan-400">Complaints</h3>
-          <p class="text-4xl font-bold text-yellow-400">2</p>
+        <div class="bg-[#1E2937] p-6 rounded-3xl">
+          <h3 class="text-cyan-400 text-sm">Complaints</h3>
+          <p class="text-4xl font-bold mt-2 text-yellow-400">2</p>
         </div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
         <!-- Recent Notices -->
-        <div class="bg-gray-900 p-8 rounded-3xl lg:col-span-1">
+        <div class="bg-[#1E2937] p-8 rounded-3xl">
           <h3 class="text-xl mb-6 font-semibold">Recent Notices</h3>
-          <ul class="space-y-4">
-            <li class="flex gap-4"><span class="text-cyan-400">📢</span> Mid-term exam schedule updated</li>
-            <li class="flex gap-4"><span class="text-cyan-400">📢</span> Mess menu for next week</li>
+          <ul class="space-y-5">
+            <li class="flex gap-3"><span class="text-pink-400">📢</span> Mid-term exam schedule updated</li>
+            <li class="flex gap-3"><span class="text-pink-400">📢</span> Mess menu for next week</li>
           </ul>
         </div>
 
         <!-- Quick Actions -->
-        <div class="bg-gray-900 p-8 rounded-3xl lg:col-span-1">
+        <div class="bg-[#1E2937] p-8 rounded-3xl">
           <h3 class="text-xl mb-6 font-semibold">Quick Actions</h3>
           <div class="grid grid-cols-2 gap-4">
             <button onclick="window.location.href='food.html'" class="bg-cyan-600 hover:bg-cyan-700 py-6 rounded-2xl text-lg">Order Food</button>
-            <button onclick="window.location.href='complaint.html'" class="bg-amber-600 hover:bg-amber-700 py-6 rounded-2xl text-lg">File Complaint</button>
+            <button onclick="window.location.href='complaint.html'" class="bg-orange-600 hover:bg-orange-700 py-6 rounded-2xl text-lg">File Complaint</button>
             <button onclick="window.location.href='payment.html'" class="bg-emerald-600 hover:bg-emerald-700 py-6 rounded-2xl text-lg">Pay Now</button>
             <button onclick="window.location.href='notice.html'" class="bg-purple-600 hover:bg-purple-700 py-6 rounded-2xl text-lg">View Notices</button>
           </div>
         </div>
 
-        <!-- Application Section (নতুন যোগ করা হয়েছে) -->
-        <div class="bg-gray-900 p-8 rounded-3xl lg:col-span-1">
+        <!-- My Applications -->
+        <div class="bg-[#1E2937] p-8 rounded-3xl">
           <h3 class="text-xl mb-6 font-semibold flex items-center gap-2">
             <i class="fas fa-file-alt"></i> My Applications
           </h3>
           
           <div class="space-y-6">
-            <!-- Active Application -->
-            <div class="border border-cyan-500/30 bg-gray-800/50 p-5 rounded-2xl">
+            <div class="bg-gray-800/60 p-5 rounded-2xl">
               <div class="flex justify-between items-start">
                 <div>
                   <p class="font-semibold">Hostel Room Application</p>
-                  <p class="text-sm text-gray-400">Application ID: APP-7842</p>
+                  <p class="text-sm text-gray-400">APP-7842</p>
+                  <p class="text-xs text-gray-500 mt-1">05 June 2026</p>
                 </div>
-                <span class="bg-yellow-500 text-black text-xs font-medium px-3 py-1 rounded-full">Pending</span>
+                <span class="bg-yellow-500 text-black text-xs px-4 py-1 rounded-full font-medium">Pending</span>
               </div>
-              <p class="text-sm mt-3 text-gray-300">Applied on: 05 June 2026</p>
             </div>
 
-            <!-- Previous Application -->
-            <div class="border border-green-500/30 bg-gray-800/50 p-5 rounded-2xl">
+            <div class="bg-gray-800/60 p-5 rounded-2xl">
               <div class="flex justify-between items-start">
                 <div>
                   <p class="font-semibold">Mess Registration</p>
-                  <p class="text-sm text-gray-400">Application ID: APP-6521</p>
+                  <p class="text-sm text-gray-400">APP-6521</p>
+                  <p class="text-xs text-gray-500 mt-1">28 May 2026</p>
                 </div>
-                <span class="bg-green-500 text-black text-xs font-medium px-3 py-1 rounded-full">Approved</span>
+                <span class="bg-green-500 text-black text-xs px-4 py-1 rounded-full font-medium">Approved</span>
               </div>
-              <p class="text-sm mt-3 text-gray-300">Applied on: 28 May 2026</p>
             </div>
           </div>
 
           <button onclick="window.location.href='application.html'" 
-                  class="mt-6 w-full bg-cyan-500 hover:bg-cyan-600 py-4 rounded-2xl font-semibold">
+                  class="mt-8 w-full bg-cyan-500 hover:bg-cyan-600 py-4 rounded-2xl font-semibold">
             New Application
           </button>
         </div>
