@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Menu - Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="bg-[#F8F1E9]">
+  <div class="flex min-h-screen">
+    
+    <!-- Sidebar -->
+    <div class="w-72 bg-[#0F3D2B] text-white p-6">
+      <div class="flex items-center gap-3 mb-10">
+        <div class="w-12 h-12 bg-[#E65C3A] rounded-2xl flex items-center justify-center text-3xl">👨‍💼</div>
+        <h1 class="text-2xl font-bold">Admin Panel</h1>
+      </div>
+      
+      <nav class="space-y-2">
+        <a href="dashboard.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="manage-students.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-users"></i> Manage Students</a>
+        <a href="manage-rooms.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-bed"></i> Manage Rooms</a>
+        <a href="food-menu.html" class="flex items-center gap-4 px-6 py-4 bg-[#E65C3A] rounded-2xl"><i class="fas fa-utensils"></i> Food Menu</a>
+        <a href="applications.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-file-alt"></i> Applications</a>
+        <a href="complaints.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-exclamation-triangle"></i> Complaints</a>
+        <a href="notices.html" class="flex items-center gap-4 px-6 py-4 hover:bg-white/10 rounded-2xl"><i class="fas fa-bullhorn"></i> Notices</a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-8">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-4xl font-bold text-[#0F3D2B]">Manage Food Menu</h2>
+        <button class="bg-[#E65C3A] hover:bg-[#d94e2f] text-white px-6 py-3 rounded-2xl flex items-center gap-2">
+          <i class="fas fa-plus"></i> Add New Item
+        </button>
+      </div>
+
+      <!-- Breakfast -->
+      <h3 class="text-2xl font-semibold mb-6 text-[#4A7043]">Breakfast</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-3xl shadow">
+          <h4 class="font-semibold">Ruti + Bhaji</h4>
+          <p class="text-[#E65C3A] text-2xl font-bold mt-2">৳ 60</p>
+          <div class="flex gap-3 mt-4">
+            <button class="flex-1 bg-gray-100 hover:bg-gray-200 py-2 rounded-xl text-sm">Edit</button>
+            <button class="flex-1 bg-red-100 hover:bg-red-200 text-red-600 py-2 rounded-xl text-sm">Delete</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lunch -->
+      <h3 class="text-2xl font-semibold mb-6 text-[#4A7043]">Lunch / Meal</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-3xl shadow">
+          <h4 class="font-semibold">Rice + Fish Curry + Dal</h4>
+          <p class="text-[#E65C3A] text-2xl font-bold mt-2">৳ 140</p>
+          <div class="flex gap-3 mt-4">
+            <button class="flex-1 bg-gray-100 hover:bg-gray-200 py-2 rounded-xl text-sm">Edit</button>
+            <button class="flex-1 bg-red-100 hover:bg-red-200 text-red-600 py-2 rounded-xl text-sm">Delete</button>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-3xl shadow">
+          <h4 class="font-semibold">Rice + Chicken Curry</h4>
+          <p class="text-[#E65C3A] text-2xl font-bold mt-2">৳ 160</p>
+          <div class="flex gap-3 mt-4">
+            <button class="flex-1 bg-gray-100 hover:bg-gray-200 py-2 rounded-xl text-sm">Edit</button>
+            <button class="flex-1 bg-red-100 hover:bg-red-200 text-red-600 py-2 rounded-xl text-sm">Delete</button>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-3xl shadow">
+          <h4 class="font-semibold">Biriyani (Monday Special)</h4>
+          <p class="text-[#E65C3A] text-2xl font-bold mt-2">৳ 180</p>
+          <div class="flex gap-3 mt-4">
+            <button class="flex-1 bg-gray-100 hover:bg-gray-200 py-2 rounded-xl text-sm">Edit</button>
+            <button class="flex-1 bg-red-100 hover:bg-red-200 text-red-600 py-2 rounded-xl text-sm">Delete</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Evening Snacks -->
+      <h3 class="text-2xl font-semibold mb-6 text-[#4A7043]">Evening Snacks</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-3xl shadow">
+          <h4 class="font-semibold">Tea + Biscuit</h4>
+          <p class="text-[#E65C3A] text-2xl font-bold mt-2">৳ 40</p>
+          <div class="flex gap-3 mt-4">
+            <button class="flex-1 bg-gray-100 hover:bg-gray-200 py-2 rounded-xl text-sm">Edit</button>
+            <button class="flex-1 bg-red-100 hover:bg-red-200 text-red-600 py-2 rounded-xl text-sm">Delete</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dinner -->
+      <h3 class="text-2xl font-semibold mb-6 text-[#4A7043]">Dinner</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-3xl shadow">
+          <h4 class="font-semibold">Rice + Vegetable + Dal</h4>
+          <p class="text-[#E65C3A] text-2xl font-bold mt-2">৳ 130</p>
+          <div class="flex gap-3 mt-4">
+            <button class="flex-1 bg-gray-100 hover:bg-gray-200 py-2 rounded-xl text-sm">Edit</button>
+            <button class="flex-1 bg-red-100 hover:bg-red-200 text-red-600 py-2 rounded-xl text-sm">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
