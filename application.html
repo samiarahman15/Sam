@@ -3,87 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Application Status - HostelHub</title>
+  <title>Applications - HostelHub</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body class="bg-gray-950 text-white">
   <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <div class="w-72 bg-gray-900 p-6 hidden md:block">
+      <h1 class="text-3xl font-bold mb-10 text-cyan-400">HostelHub</h1>
+      <nav class="space-y-3">
+        <a href="dashboard.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="rooms.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-bed"></i> Rooms</a>
+        <a href="food.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-utensils"></i> Food Order</a>
+        <a href="complaint.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-exclamation-triangle"></i> Complaints</a>
+        <a href="payment.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-money-bill"></i> Payments</a>
+        <a href="notice.html" class="flex items-center gap-4 px-6 py-4 hover:bg-gray-800 rounded-2xl"><i class="fas fa-bullhorn"></i> Notices</a>
+        <a href="application.html" class="flex items-center gap-4 px-6 py-4 bg-gray-800 rounded-2xl"><i class="fas fa-file-alt"></i> Applications</a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
     <div class="flex-1 p-8">
-      <div class="flex justify-between items-center mb-8">
-        <h2 class="text-4xl font-bold">Hostel Applications</h2>
-        <button onclick="alert('Opening Application Form!')" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-2xl flex items-center gap-2 transition duration-200">
-          <i class="fas fa-plus"></i> New Application
+      <div class="flex justify-between items-center mb-10">
+        <h2 class="text-4xl font-bold">My Applications</h2>
+        <button onclick="window.location.href='dashboard.html'" 
+                class="bg-gray-700 hover:bg-gray-600 px-5 py-2 rounded-xl flex items-center gap-2">
+          <i class="fas fa-arrow-left"></i> Back to Dashboard
         </button>
       </div>
-      
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+      <!-- New Application Form -->
+      <div class="bg-gray-900 p-8 rounded-3xl mb-12">
+        <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
+          <i class="fas fa-plus-circle text-cyan-400"></i> Submit New Application
+        </h3>
         
-        <div class="lg:col-span-1 flex flex-col gap-6">
-          <div class="bg-gray-900 p-6 rounded-3xl border border-gray-800">
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-gray-400 font-medium">Current Status</h3>
-              <i class="fas fa-file-alt text-2xl text-blue-400"></i>
-            </div>
-            <p class="text-3xl font-bold text-yellow-400">Pending Review</p>
-            <p class="text-sm text-gray-500 mt-2">Application ID: #APP-8842</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block mb-2 text-gray-400">Application Type</label>
+            <select id="appType" class="w-full px-5 py-4 bg-gray-800 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500">
+              <option value="">Select Type</option>
+              <option value="Room">Room Allocation</option>
+              <option value="Mess">Mess Registration</option>
+              <option value="Leave">Leave Request</option>
+              <option value="Other">Others</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="block mb-2 text-gray-400">Application Date</label>
+            <input type="date" id="appDate" 
+                   class="w-full px-5 py-4 bg-gray-800 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500">
           </div>
 
-          <div class="bg-gray-900 p-6 rounded-3xl border border-gray-800">
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-gray-400 font-medium">Submission Date</h3>
-              <i class="fas fa-calendar-alt text-2xl text-green-400"></i>
-            </div>
-            <p class="text-2xl font-bold">10 June, 2026</p>
-            <p class="text-sm text-gray-500 mt-2">Applied at 09:15 AM</p>
+          <div class="md:col-span-2">
+            <label class="block mb-2 text-gray-400">Details / Reason</label>
+            <textarea id="appDetails" rows="5"
+                      class="w-full px-5 py-4 bg-gray-800 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      placeholder="Write your application details here..."></textarea>
           </div>
         </div>
 
-        <div class="lg:col-span-2 bg-gray-900 p-6 rounded-3xl border border-gray-800">
-          <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
-            <i class="fas fa-history text-gray-400"></i> Application History
-          </h3>
-          
-          <div class="overflow-x-auto">
-            <table class="w-full text-left border-collapse">
-              <thead>
-                <tr class="border-b border-gray-800 text-gray-400 text-sm">
-                  <th class="pb-3 font-semibold">Application ID</th>
-                  <th class="pb-3 font-semibold">Type / Title</th>
-                  <th class="pb-3 font-semibold">Date</th>
-                  <th class="pb-3 font-semibold text-right">Status</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-gray-800/50 text-sm">
-                <tr>
-                  <td class="py-4 font-mono text-blue-400">#APP-8842</td>
-                  <td class="py-4 font-medium">Seat Allocation (Room Change)</td>
-                  <td class="py-4 text-gray-400">10 Jun 2026</td>
-                  <td class="py-4 text-right">
-                    <span class="bg-yellow-500/10 text-yellow-500 px-3 py-1 rounded-full text-xs font-medium">Pending</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="py-4 font-mono text-blue-400">#APP-7610</td>
-                  <td class="py-4 font-medium">Maintenance Request</td>
-                  <td class="py-4 text-gray-400">02 Jan 2026</td>
-                  <td class="py-4 text-right">
-                    <span class="bg-green-500/10 text-green-500 px-3 py-1 rounded-full text-xs font-medium">Approved</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="py-4 font-mono text-blue-400">#APP-5122</td>
-                  <td class="py-4 font-medium">Internet/WiFi Issue Request</td>
-                  <td class="py-4 text-gray-400">15 Nov 2025</td>
-                  <td class="py-4 text-right">
-                    <span class="bg-green-500/10 text-green-500 px-3 py-1 rounded-full text-xs font-medium">Approved</span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <button onclick="submitApplication()" 
+                class="mt-8 bg-cyan-500 hover:bg-cyan-600 px-10 py-4 rounded-2xl font-semibold text-lg">
+          Submit Application
+        </button>
+      </div>
 
-        </div> </div> </div>
+      <!-- My Applications List -->
+      <h3 class="text-2xl font-semibold mb-6">Previous Applications</h3>
+      <div class="space-y-6">
+        <!-- Application 1 -->
+        <div class="bg-gray-900 p-7 rounded-3xl flex flex-col md:flex-row justify-between items-start gap-6">
+          <div class="flex-1">
+            <div class="flex items-center gap-3">
+              <i class="fas fa-bed text-cyan-400 text-2xl"></i>
+              <div>
+                <h4 class="font-semibold text-lg">Room Allocation Request</h4>
+                <p class="text-sm text-gray-400">APP-7842 • 05 June 2026</p>
+              </div>
+            </div>
+            <p class="mt-4 text-gray-300">Request for single room in Block A due to medical reasons.</p>
+          </div>
+          <div class="text-right">
+            <span class="bg-yellow-500 text-black px-5 py-2 rounded-full text-sm font-medium">Pending</span>
+          </div>
+        </div>
+
+        <!-- Application 2 -->
+        <div class="bg-gray-900 p-7 rounded-3xl flex flex-col md:flex-row justify-between items-start gap-6">
+          <div class="flex-1">
+            <div class="flex items-center gap-3">
+              <i class="fas fa-utensils text-orange-400 text-2xl"></i>
+              <div>
+                <h4 class="font-semibold text-lg">Mess Registration</h4>
+                <p class="text-sm text-gray-400">APP-6521 • 28 May 2026</p>
+              </div>
+            </div>
+            <p class="mt-4 text-gray-300">Applied for monthly mess subscription.</p>
+          </div>
+          <div class="text-right">
+            <span class="bg-green-500 text-black px-5 py-2 rounded-full text-sm font-medium">Approved</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <script>
+    function submitApplication() {
+      const type = document.getElementById('appType').value;
+      const details = document.getElementById('appDetails').value;
+
+      if (!type || !details) {
+        alert("Please select application type and write details.");
+        return;
+      }
+
+      alert(`✅ Application Submitted Successfully!\n\nType: ${type}\nWe will review your application soon.`);
+      
+      // Reset form
+      document.getElementById('appType').value = "";
+      document.getElementById('appDetails').value = "";
+    }
+  </script>
 </body>
 </html>
